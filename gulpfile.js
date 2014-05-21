@@ -21,12 +21,13 @@ try {
 var assetSrcPath = "./";
 
 var paths = {
-  less : './less/bootstrap.less',
+  bootstrapless : './less/bootstrap.less',
+  less : './less/*.*',
   css  : './css/'
 };
 
 gulp.task('styles', function() {
-  return gulp.src(paths.less, {cwd: './'})
+  return gulp.src(paths.bootstrapless, {cwd: './'})
     /*.pipe(debug({verbose:false}))*/
     .pipe(less())
     /*.pipe(debug({verbose:false}))*/
