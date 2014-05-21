@@ -21,8 +21,8 @@ try {
 var assetSrcPath = "./";
 
 var paths = {
-  less : './**/less/bootstrap.less',
-  css  : './**/css/'
+  less : './less/bootstrap.less',
+  css  : './css/'
 };
 
 gulp.task('styles', function() {
@@ -30,11 +30,13 @@ gulp.task('styles', function() {
     /*.pipe(debug({verbose:false}))*/
     .pipe(less())
     /*.pipe(debug({verbose:false}))*/
+    .pipe(gulp.dest(paths.css)) /* SAVES THE UNMINIFIED VERSION */
+    /*.pipe(debug({verbose:false}))*/
     .pipe(cssmin())
     /*.pipe(debug({verbose:false}))*/
     .pipe(rename(({suffix: '.min'})))
     /*.pipe(debug({verbose:false}))*/
-    .pipe(gulp.dest(paths.css));
+    .pipe(gulp.dest(paths.css)); /* SAVES THE MIN VERSION */
 });
 
 
