@@ -18,7 +18,9 @@ Because it makes your seem cool!
 Install
 =====
 
-### Step 1: Clone
+### Step 1: Clone & Modify
+
+Clone the files to your harddrive.  Copy the gulpfile.js and package.json into your website's director.  Edit the gulpfile so the pathing to your less and css folders match up to your site.  As a default, we assume you have a ```./less``` folder and a ```./css```.
 
 ### Step 2: Install Dependencies
 
