@@ -27,13 +27,13 @@ var paths = {
 
 gulp.task('styles', function() {
   return gulp.src(paths.less, {cwd: './'})
-    .pipe(debug({verbose:false}))
+    /*.pipe(debug({verbose:false}))*/
     .pipe(less())
-    .pipe(debug({verbose:false}))
+    /*.pipe(debug({verbose:false}))*/
     .pipe(cssmin())
-    .pipe(debug({verbose:false}))
+    /*.pipe(debug({verbose:false}))*/
     .pipe(rename(({suffix: '.min'})))
-    .pipe(debug({verbose:false}))
+    /*.pipe(debug({verbose:false}))*/
     .pipe(gulp.dest(paths.css));
 });
 
